@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 435762802}
   - component: {fileID: 435762801}
   - component: {fileID: 435762804}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: AQUAS Waterplane 0
   m_TagString: water
   m_Icon: {fileID: 0}
@@ -514,6 +514,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6289528392556415613, guid: 0e6e252f12bee32469622b66c4a68699,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294967039
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e6e252f12bee32469622b66c4a68699, type: 3}
@@ -779,7 +784,7 @@ Transform:
   m_LocalScale: {x: 5000, y: 5000, z: 5000}
   m_Children: []
   m_Father: {fileID: 928294023}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &923875011
 GameObject:
@@ -791,7 +796,7 @@ GameObject:
   m_Component:
   - component: {fileID: 923875012}
   - component: {fileID: 923875013}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Reflection Probe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -836,7 +841,7 @@ ReflectionProbe:
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 567
   m_IntensityMultiplier: 1
   m_BlendDistance: 1
   m_HDR: 1
@@ -869,12 +874,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928294022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.8534966, y: -10.785637, z: 59.609825}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1047865220}
   - {fileID: 851894064}
   - {fileID: 2002779444}
-  - {fileID: 1047865220}
   - {fileID: 1389233168}
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -909,11 +914,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1047865219}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.8534966, y: 26.885637, z: -59.609825}
+  m_LocalPosition: {x: 0, y: 16.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 928294023}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1077819482
 GameObject:
@@ -926,7 +931,7 @@ GameObject:
   - component: {fileID: 1077819483}
   - component: {fileID: 1077819485}
   - component: {fileID: 1077819484}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: PrimaryCausticsProjector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1238,7 +1243,7 @@ Projector:
   m_Material: {fileID: 827537126}
   m_IgnoreLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
 --- !u!1 &1173967299
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,7 +1490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1481748861}
   - component: {fileID: 1481748860}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: AQUAS Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2234,7 +2239,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 928294023}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 140.8, y: 0, z: 0}
 --- !u!1001 &440120878675712587
 PrefabInstance:
