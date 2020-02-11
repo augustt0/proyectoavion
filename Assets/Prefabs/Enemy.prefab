@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   helice: {fileID: 8586922241257880253}
-  m_MaxEnginePower: 30
+  m_MaxEnginePower: 20
   m_Lift: 0.002
   m_ZeroLiftSpeed: 300
   m_RollEffect: 1
@@ -334,6 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f947e56d54f4274896478766fef616c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players: []
   m_RollSensitivity: 0.5
   m_PitchSensitivity: 0.5
   m_LateralWanderDistance: 2

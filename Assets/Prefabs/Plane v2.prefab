@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 397764161531696624}
   - component: {fileID: 1825436782489953470}
   m_Layer: 0
-  m_Name: ala1
+  m_Name: alaD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 397799827655628766}
   - component: {fileID: 2647802013671101135}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: alaT1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -413,7 +413,7 @@ GameObject:
   - component: {fileID: 397685839192615400}
   - component: {fileID: 267243545393981919}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: alaT2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -509,6 +509,7 @@ GameObject:
   - component: {fileID: 3879166688259715916}
   - component: {fileID: 5175009379393207185}
   - component: {fileID: -1790636453857811614}
+  - component: {fileID: 4685878898170546725}
   m_Layer: 0
   m_Name: Plane v2
   m_TagString: PlayerPlane
@@ -597,7 +598,6 @@ MonoBehaviour:
   playerPrefab: {fileID: 419710253901005792}
   reloadTime: 5
   reloading: 0
-  bulletsTxt: {fileID: 0}
   shootAudio: {fileID: 4912466365561901868}
 --- !u!114 &2463341917065325377
 MonoBehaviour:
@@ -767,6 +767,34 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
+--- !u!114 &4685878898170546725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419710253901005792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 476fd4e3ff28e034cbcb83b8dce2e584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nEquipo: 0
+  eMaterialColor:
+  - {fileID: 2100000, guid: 39ffc882248399f48a344f8efa158f13, type: 2}
+  - {fileID: 2100000, guid: f9b9762cb50a10547bdbf87f43ca0276, type: 2}
+  - {fileID: 2100000, guid: 3e9318e1526dc9242b5f29ca9b318fbb, type: 2}
+  - {fileID: 2100000, guid: fe55a0339d3d72646a3c9ec583257897, type: 2}
+  partes:
+  - {fileID: 4839810822993769932}
+  - {fileID: 419349640685629574}
+  - {fileID: 7497213363977495453}
+  - {fileID: 7497213364744059786}
+  - {fileID: 419527379756126208}
+  - {fileID: 419612653723871592}
+  trailL: {fileID: 324304840435600418}
+  trailR: {fileID: 324530891473087762}
+  teamName: 
 --- !u!1 &419835177547582664
 GameObject:
   m_ObjectHideFlags: 0
@@ -1421,7 +1449,7 @@ GameObject:
   - component: {fileID: 7497213363977495451}
   - component: {fileID: 3939033735215769114}
   m_Layer: 0
-  m_Name: ala2
+  m_Name: alaD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1643,7 +1671,7 @@ GameObject:
   - component: {fileID: 7497213364744059784}
   - component: {fileID: 4773337165819431729}
   m_Layer: 0
-  m_Name: ala3
+  m_Name: alaD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
