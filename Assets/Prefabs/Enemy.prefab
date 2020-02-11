@@ -139,7 +139,6 @@ GameObject:
   - component: {fileID: 440120878006187447}
   - component: {fileID: 440120877996385081}
   - component: {fileID: 440120877996385083}
-  - component: {fileID: 440120877996385085}
   - component: {fileID: 440120877996385087}
   - component: {fileID: 440120877993436439}
   - component: {fileID: 440120877996385059}
@@ -204,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   helice: {fileID: 8586922241257880253}
-  m_MaxEnginePower: 20
+  m_MaxEnginePower: 30
   m_Lift: 0.002
   m_ZeroLiftSpeed: 300
   m_RollEffect: 1
@@ -248,35 +247,6 @@ MonoBehaviour:
     amount: 30
     type: 0
     originalLocalRotation: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &440120877996385085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 440120878002951817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66329fe4ad8cd59478fffdc10131da1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EngineSound: {fileID: 8300000, guid: 9db9336e9f17c9744847c5fe94c1650f, type: 3}
-  m_EngineMinThrottlePitch: 0.4
-  m_EngineMaxThrottlePitch: 2
-  m_EngineFwdSpeedMultiplier: 0.002
-  m_WindSound: {fileID: 8300000, guid: 38d4d0ff7855e984285fbf430385b2aa, type: 3}
-  m_WindBasePitch: 0.2
-  m_WindSpeedPitchFactor: 0.004
-  m_WindMaxSpeedVolume: 100
-  m_AdvancedSetttings:
-    engineMinDistance: 50
-    engineMaxDistance: 1000
-    engineDopplerLevel: 1
-    engineMasterVolume: 0.5
-    windMinDistance: 10
-    windMaxDistance: 100
-    windDopplerLevel: 1
-    windMasterVolume: 0.5
 --- !u!114 &440120877996385087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,7 +312,7 @@ MonoBehaviour:
   m_MaxClimbAngle: 45
   m_MaxRollAngle: 70
   m_SpeedEffect: 0.01
-  m_TakeoffHeight: 5
+  m_TakeoffHeight: 16
   m_Target: {fileID: 0}
 --- !u!114 &440120877996385057
 MonoBehaviour:
