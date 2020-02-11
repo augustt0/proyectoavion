@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -7,6 +8,8 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
     [RequireComponent(typeof (AeroplaneController))]
     public class AeroplaneAiControl : MonoBehaviour
     {
+        public GameObject[] players;
+
         // This script represents an AI 'pilot' capable of flying the plane towards a designated target.
         // It sends the equivalent of the inputs that a user would send to the Aeroplane controller.
         [SerializeField] private float m_RollSensitivity = .2f;         // How sensitively the AI applies the roll controls
@@ -41,10 +44,27 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
             m_TakenOff = false;
         }
 
+        float[] playerDistances;
+
         private void Update()
         {
-            if (m_Target == null)
-                m_Target = GameObject.FindGameObjectWithTag("PlayerPlane").transform;
+            players = GameObject.FindGameObjectsWithTag("PlayerPlane");
+
+            if(players.Length > 1)
+            {
+                for (int i = 0; i < players.Length; i++)
+                {
+                    playerDistances[i] = Vector3.Distance(transform.position, players[i].transform.position);
+                }
+
+                int minIndex = Array.IndexOf(playerDistances, playerDistances.Min());
+                m_Target = players[minIndex].transform;
+            }
+            else
+            {
+                m_Target = players[0].transform;
+            }
+            
         }
 
         // fixed update is called in time with the physics system update

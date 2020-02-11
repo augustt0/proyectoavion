@@ -4,6 +4,7 @@
 //
 
 using UnityEngine;
+using UnityEngine.Networking;
 
 namespace MFlight.Demo
 {
@@ -16,10 +17,13 @@ namespace MFlight.Demo
     /// </summary>
     /// 
     [RequireComponent(typeof(Rigidbody))]
-    public class Plane : MonoBehaviour
+    public class Plane : NetworkBehaviour
     {
         public Transform helice;
-        public GameObject mouseRig;
+
+        [Header("For Multi Only")]
+        public GameObject mouseRigGO;
+        public GameObject mouseHudGO;
 
         [Header("Components")]
         [SerializeField] private MouseFlightController controller = null;
@@ -51,25 +55,25 @@ namespace MFlight.Demo
         {
             rigid = GetComponent<Rigidbody>();
 
-            mouseRig = GameObject.Find("MouseFlightRig");
-
             if (controller == null)
                 Debug.LogError(name + ": Plane - Missing reference to MouseFlightController!");
         }
 
         private void Update()
         {
+            if (!isLocalPlayer)
+            {
+                mouseHudGO.SetActive(false);
+                mouseRigGO.SetActive(false);
+                return;
+            }
+
             // When the player commands their own stick input, it should override what the
             // autopilot is trying to do.
             rollOverride = false;
             pitchOverride = false;
 
             helice.Rotate(new Vector3(0f, 0f, 20f));
-
-            if(controller == null)
-            {
-                controller = mouseRig.GetComponent<MouseFlightController>();
-            }
 
             float keyboardRoll = Input.GetAxis("Horizontal");
             if (Mathf.Abs(keyboardRoll) > .25f)
@@ -96,7 +100,6 @@ namespace MFlight.Demo
             pitch = (pitchOverride) ? keyboardPitch : autoPitch;
             roll = (rollOverride) ? keyboardRoll : autoRoll;
         }
-
         private void RunAutopilot(Vector3 flyTarget, out float yaw, out float pitch, out float roll)
         {
             // This is my usual trick of converting the fly to position to local space.

@@ -4,6 +4,7 @@
 //
 
 using UnityEngine;
+using UnityEngine.Networking;
 
 namespace MFlight
 {
@@ -11,7 +12,7 @@ namespace MFlight
     /// Combination of camera rig and controller for aircraft. Requires a properly set
     /// up rig. I highly recommend either using or referencing the included prefab.
     /// </summary>
-    public class MouseFlightController : MonoBehaviour
+    public class MouseFlightController : NetworkBehaviour
     {
         [Header("Components")]
         [SerializeField] [Tooltip("Transform of the aircraft the rig follows and references")]
@@ -98,11 +99,6 @@ namespace MFlight
 
         private void Update()
         {
-            if(aircraft == null)
-            {
-                aircraft = GameObject.FindGameObjectWithTag("PlayerPlane").transform;
-            }
-
             if (useFixed == false)
                 UpdateCameraPos();
 
@@ -131,7 +127,6 @@ namespace MFlight
                 isMouseAimFrozen = false;
                 mouseAim.forward = frozenDirection;
             }
-
             // Mouse input.
             float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
             float mouseY = -Input.GetAxis("Mouse Y") * mouseSensitivity;
